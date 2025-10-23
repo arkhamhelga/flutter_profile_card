@@ -35,7 +35,7 @@ class profilecard extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal:  20, vertical:  50),
+                    padding: const EdgeInsets.only(bottom:  10),
                     /**
                      * only : hanya memberi satu posisi
                      * symmetric : memberi jarak sumbu x/y
@@ -53,6 +53,28 @@ class profilecard extends StatelessWidget {
                   Text(
                     'Arkham Helga',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                            width: mediaQuery.of(context).size.width * o.5,
+                            decoration: BoxDecoration(color: Colors.redAccent, borderRadius: BorderRadius.circular(15)),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0)),
+                              ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                        Container(),
+                        ],
+                        ),
+                    ],
                   ),
                 ],
               ),
