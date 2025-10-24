@@ -1,18 +1,18 @@
+// main.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/profile.dart';
+import 'About.Me.dart';
 
 void main() {
-  runApp(MainPage());
+  runApp(const MainPage());
 }
-
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: profilecard(),
+    return const MaterialApp(
+      home: AboutMe(),
       debugShowCheckedModeBanner: false,
     );
   }
