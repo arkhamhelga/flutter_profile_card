@@ -35,7 +35,7 @@ class profilecard extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(bottom:  10),
+                    padding: const EdgeInsets.only(bottom: 10),
                     /**
                      * only : hanya memberi satu posisi
                      * symmetric : memberi jarak sumbu x/y
@@ -55,25 +55,51 @@ class profilecard extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    /**
+                     * start => ful kiri
+                     * center => ful tengah
+                     * end => ful kanan
+                     * spaceBetwen => ke pojok dari bagian
+                     * spaceAround => ke tengah dari bagian
+                     * spaceEvenly => ke tengah hampir mirip space around
+                     */
                     children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                            width: mediaQuery.of(context).size.width * o.5,
-                            decoration: BoxDecoration(color: Colors.redAccent, borderRadius: BorderRadius.circular(15)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0)),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.redAccent,
+                                borderRadius: BorderRadius.circular(15),
                               ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                        Container(),
-                        ],
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Adress'),
+                              ),
+                            ),
+                          ],
                         ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.redAccent,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Tempat Tanggal Lahir'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
